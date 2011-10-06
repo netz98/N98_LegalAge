@@ -1,4 +1,5 @@
 <?php
+
 /**
  * netz98 LegalAge magento module
  *
@@ -33,14 +34,16 @@
  * @category N98
  * @package N98_LegalAge
  */
-
 class N98_LegalAge_ModuleLoadsTest extends PHPUnit_Framework_TestCase
 {
+
     /**
      * Tests if models are correctly loaded
      */
-    public function testLoadModels() {
+    public function testLoadModels()
+    {
         $model = Mage::getModel('checkout/type_onepage');
         $this->assertInstanceOf('N98_LegalAge_Model_Type_Onepage', $model);
     }
+
 }

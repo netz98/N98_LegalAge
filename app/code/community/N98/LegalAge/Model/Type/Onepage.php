@@ -34,7 +34,48 @@
  * @category N98
  * @package N98_LegalAge
  */
-class N98_LegalAge_Model_Type_Onepage extends Mage_Core_Model_Abstract
+class N98_LegalAge_Model_Type_Onepage extends Mage_Checkout_Model_Type_Onepage
 {
+    const LIMITED_AGE = 7;
+    const LEGAL_AGE = 18;
+
+    /**
+     * Checks the legal age
+     *
+     * @param   array $data
+     * @param   int $customerAddressId
+     * @return  Mage_Checkout_Model_Type_Onepage
+     */
+    public function saveBilling($data, $customerAddressId) {
+        $result = parent::saveBilling($data, $customerAddressId);
+
+        if (isset($result['error'])) {
+            return $result;
+        }
+
+        $dobIso = $this->getQuote()->getCustomerDob();
+        $dob = new Zend_Date($dobIso,Zend_Date::ISO_8601);
+
+        $legalBirthDay = $dob->add( self::LIMITED_AGE , Zend_Date::YEAR );
+        $legal1 = Zend_Date::now()->isLater($legalBirthDay);
+
+        if (!$legal1) { // not even limited legal
+            $result['error'] = 1;
+            $result['message'] = Mage::helper('n98legalage')->__('You are not yet limited contractually capable. You can ask your legal guardian to purchase.');
+            return $result;
+        }
+
+        $dob = new Zend_Date($dobIso,Zend_Date::ISO_8601);
+        $legalBirthDay = $dob->add( self::LEGAL_AGE , Zend_Date::YEAR );
+        $legal2 = Zend_Date::now()->isLater($legalBirthDay);
+
+        if (!$legal2) {
+            $result['error'] = 1;
+            $result['message'] = Mage::helper('n98legalage')->__('You are not yet contractually capable. You can ask your legal guardian to purchase on your behalf.');
+            return $result;
+        }
+
+        return $result;
+    }
 
 }
