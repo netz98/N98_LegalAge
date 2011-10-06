@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    N98
+ * @package     N98_LegalAge
+ * @copyright   Copyright (c) 2011 netz98 new media gmbh
+ */
+-->
+<config>
+    <modules>
+        <N98_LegalAge>
+            <active>true</active>
+            <codePool>community</codePool>
+             <depends>
+            </depends>
+        </N98_LegalAge>
+    </modules>
+</config>
