@@ -45,8 +45,23 @@ This software is provided by the netz98 new media GmbH without any express or im
                 </N98_LegalAge>
             </modules>
         </translate>
+        <routers>
+            <N98_LegalAge>
+                <use>standard</use>
+                <args>
+                    <module>N98_LegalAge</module>
+                    <frontName>n98legalage</frontName>
+                </args>
+            </N98_LegalAge>
+        </routers>
     </frontend>
     <global>
+        <rewrite>
+            <N98_LegalAge_Customer_Account>
+                <from><![CDATA[#^/customer/account/#]]></from>
+                <to>/n98legalage/customer_account/</to>
+            </N98_LegalAge_Customer_Account>
+        </rewrite>
         <resources>
             <n98legalage_setup>
                 <setup>
