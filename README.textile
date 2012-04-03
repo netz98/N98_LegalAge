@@ -1,0 +1,32 @@
+h1. N98_LegalAge Magento Module
+
+Ensures that the age of a new customer is 18 years.
+
+h2. Functionality
+
+The module checks on the checkout when saving the billing address,
+that the customer, according to the provided birthdate, is contractually capable.
+
+h3. Beta Notice
+
+This is a generally functional beta version. The module's code will be refactored.
+
+h2. Installation
+
+Copy all the files in your Magento root folder or use "modman":https://github.com/colinmollenhour/modman for installation.
+After installation, clear your Magento cache.
+
+h2. Configuration
+
+The birthdate field has to be activated on @System -> Configuration -> Customers -> Customer Configuration -> Name and Address Options -> Show Date of Birth@.
+
+h2. Compatibility
+
+The module was successfully tested in the following Magento versions:
+
+* CE 1.4
+* CE 1.6.0
+* CE 1.6.2
+* EE 1.11
+
+

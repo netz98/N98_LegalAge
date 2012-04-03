@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://magento16.producer56.netz98.local/" />
+<title>checkout_signup</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">checkout_signup</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/index.php/furniture/living-room/ottoman.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.button.btn-cart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[2]/ul/li/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login:register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.buttons-set &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:firstname</td>
+	<td>Teset</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:firstname</td>
+	<td>Rainer</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:lastname</td>
+	<td>Zufall</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:email</td>
+	<td>rainer@zufall.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:postcode</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:street1</td>
+	<td>Teststraße 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:city</td>
+	<td>Zufallshausen</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:telephone</td>
+	<td>0123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:day</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:month</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:year</td>
+	<td>1980</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:customer_password</td>
+	<td>test123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:confirm_password</td>
+	<td>test123456</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#billing-buttons-container &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button.validation-passed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#shipping-method-buttons-container &gt; p.back-link &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=« Zurück</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button.validation-passed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#shipping-method-buttons-container &gt; p.back-link &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=« Zurück</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button.validation-passed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>You are too young, validate data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.button.validation-passed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertAlert</td>
+	<td>You are too young</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/div[6]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=notes</td>
+	<td>Änderungen in Mage_Eav_Model_Attribute_Data_Date::validateValue() wirken sich auf den Checkout Prozess aus.<br />Es kann also dort überschrieben werden.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#issue-form &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.buttons-set &gt; button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:firstname</td>
+	<td>dsa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:lastname</td>
+	<td>dsa</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing:email</td>
+	<td>sdasda@dasda.de</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
