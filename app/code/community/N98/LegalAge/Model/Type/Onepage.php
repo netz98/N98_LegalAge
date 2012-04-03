@@ -36,7 +36,14 @@
  */
 class N98_LegalAge_Model_Type_Onepage extends Mage_Checkout_Model_Type_Onepage
 {
+    /**
+     * @var int
+     */
     const LIMITED_AGE = 7;
+
+    /**
+     * @var int
+     */
     const LEGAL_AGE = 18;
 
     /**
@@ -54,7 +61,7 @@ class N98_LegalAge_Model_Type_Onepage extends Mage_Checkout_Model_Type_Onepage
         }
 
         $dobIso = $this->getQuote()->getCustomerDob();
-        $dob = new Zend_Date($dobIso,Zend_Date::ISO_8601);
+        $dob = new Zend_Date($dobIso, Zend_Date::ISO_8601);
 
         $legalBirthDay = $dob->add( self::LIMITED_AGE , Zend_Date::YEAR );
         $legal1 = Zend_Date::now()->isLater($legalBirthDay);

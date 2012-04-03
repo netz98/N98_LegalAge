@@ -1,0 +1,3 @@
+app/etc/modules/N98_LegalAge.xml                            app/etc/modules/N98_LegalAge.xml
+app/code/community/N98/LegalAge                             app/code/community/N98/LegalAge
+app/locale/de_DE/N98_LegalAge.csv                           app/locale/de_DE/N98_LegalAge.csv
